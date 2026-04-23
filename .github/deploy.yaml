@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-           cd Basic_Node_App
-              git pull origin main
+            cd Basic_Node_App
+            git pull origin main
             npm install
             pm2 restart all || pm2 start app.js --name basic-node-app
